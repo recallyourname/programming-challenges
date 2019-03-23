@@ -1,3 +1,2 @@
 import secrets
-ways = ['heads','tails']
-print(secrets.choice(ways))
+print(secrets.choice(['heads','tails']))
