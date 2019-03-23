@@ -1,3 +1,3 @@
-temp = int(input("Insert temperature in Celsium: "))
+temp = int(input())
 fahr = 5*(temp-32)/9
-print("Temperature in F:", fahr)
+print("Temperature in F: %.1f" %fahr)
