@@ -5,8 +5,8 @@ if way == "e":
     string = string.lower()
     encrypted = ""
     for char in string:
-        if "z" <= char >= "x":
-            encrypted -= chr(ord(char)-26)
+        if "x" <= char <= "z":
+            encrypted += chr(ord(char)-23)
         elif char == " ":
             encrypted += " "
         else:
@@ -17,7 +17,7 @@ elif way == "d":
     decrypted = ""
     for char in string:
         if "a" <= char <= "c":
-            decrypted += chr(ord(char)+26)
+            decrypted += chr(ord(char)+23)
         elif char == " ":
             decrypted += " "
         else:
