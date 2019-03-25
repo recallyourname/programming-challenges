@@ -1,7 +1,4 @@
 def isVowel(string):
-    """
-    this boolean function simply check if char is vowel (quite obviously)
-    """
     if string in 'aeiou':
         return True
     else:
@@ -36,9 +33,6 @@ def main():
     if ('l' or 'o' or 'v' or 'e') in name1 and name2:
         pts += 7
     print("You have: %d of 66 compatibility points" %pts)
-    """
-    this criterias is from the picture i found on the internet
-    """
 
 if __name__ == "__main__":
     main()
