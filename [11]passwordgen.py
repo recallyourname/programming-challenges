@@ -4,7 +4,7 @@ import secrets
 def password(num):
     data = ""
     availableSymbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()-_=+[].,?"
-    for i in range(num):
+    for _ in range(num):
         data += secrets.choice(availableSymbols)
     return data
 
