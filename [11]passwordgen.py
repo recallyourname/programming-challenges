@@ -11,7 +11,7 @@ def filedirectory():
 
 def password(num):
     data = ""
-    availableSymbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()-_=+[].,?"
+    availableSymbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()-=+[].,?"
     for _ in range(num):
         data += secrets.choice(availableSymbols)
     return data
@@ -27,7 +27,7 @@ def main():
         f.write("Password for "+label+" is: "+data+"\n")
         f.close()
     print(data)
-    print("Password also stored in /filedirectory/passwords")
+    print("Password also stored in "+directory+"/passwords")
 
 if __name__ == "__main__":
     main()
