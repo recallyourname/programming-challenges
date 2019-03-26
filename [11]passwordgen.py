@@ -8,14 +8,12 @@ def makedirectory():
     except FileExistsError:
         print("Directory passwords already exist")    
 
-
 def password(num):
     data = ""
     availableSymbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()-=+[].,?"
     for _ in range(num):
         data += secrets.choice(availableSymbols)
     return data
-
 
 def main():
     makedirectory()
