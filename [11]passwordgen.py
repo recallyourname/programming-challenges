@@ -1,7 +1,7 @@
 import os
 import secrets
 
-def filedirectory():
+def makedirectory():
     try:
         os.mkdir("passwords")
         print("Directory passwords created")
@@ -18,12 +18,20 @@ def password(num):
 
 
 def main():
-    filedirectory()
+    makedirectory()
     directory = os.getcwd()
-    numbers = int(input("Input the number of symbols in password: "))
+    number = None
+
+    while number is None:
+        try:
+            number = int(input("Input the number of symbols in password: "))
+        except (ValueError, UnboundLocalError):
+            print("Must be an integer number, try again!")
+
     label = input("Put a label for your password here(where it will be used): ")
+
     with open(directory+'/passwords/password.txt','a+') as f:
-        data = password(numbers)
+        data = password(number)
         f.write("Password for "+label+" is: "+data+"\n")
         f.close()
     print(data)
